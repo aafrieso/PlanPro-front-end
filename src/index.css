@@ -3,6 +3,8 @@ body {
   font-family: 'Rubik', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./assets/branding/background.jpg');
+  background-size: cover;
 }
 
 code {
