@@ -23,6 +23,8 @@
   width: 25%;
   min-width: 460px;
   margin-top: 100px;
+  -moz-box-shadow: -1px 5px 30px -5px rgba(0,0,0,0.15);
+  -webkit-box-shadow: -1px 5px 30px -5px rgba(0,0,0,0.15);
 }
 
 .splash {
@@ -102,7 +104,7 @@
   padding: 50px 0px;
   display: flex;
   background: white;
-  background: #0c7136;
+  background: #000000;
   justify-content: center;
   color:  rgb(220, 220, 220);
   border-top: 1px solid rgb(220, 220, 220);
