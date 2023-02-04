@@ -40,11 +40,11 @@ a:hover {
   color: rgb(51, 138, 104);
 }
 
-/* @media only screen and (max-width: 414px) {
+@media only screen and (max-width: 414px) {
   .container ul {
     padding-left: 0px;
   }
   .container li {
     font-size: 15px;
   }
-} */
+}
