@@ -1,7 +1,7 @@
 // import { NavLink } from 'react-router-dom'
 import styles from './NavBar.module.css'
 import { NavLink } from 'react-router-dom'
-import Logo from '../../assets/branding/logo.png'
+import Logo from '../../assets/branding/PlanProHorizontal.png'
 
 const NavBar = ({ user, handleLogout }) => {
 
