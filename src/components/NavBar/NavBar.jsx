@@ -14,16 +14,16 @@ const NavBar = ({ user, handleLogout }) => {
 
   const protectedLinks = (
     <ul>
-      {/* <li>Welcome, {user.name}</li> */}
-      <li><NavLink to="/profiles">Profiles</NavLink></li>
-      <li><NavLink to="" onClick={handleLogout}>LOG OUT</NavLink></li>
+      <li>Welcome, {user?.name}</li>
+      <li><NavLink to="/profile">Profile</NavLink></li>
+      <li><NavLink to="" onClick={handleLogout}>Log Out</NavLink></li>
       <li><NavLink to="/change-password">Change Password</NavLink></li>
     </ul>
   )
 
   return (
     <nav className={styles.container}>
-      <NavLink to={'/'}><img src={Logo} alt="A cute owl" /></NavLink>
+      <NavLink to={'/'}><img src={Logo} alt="logo" /></NavLink>
       {user ? protectedLinks : publicLinks}
     </nav>
   )

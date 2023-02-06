@@ -6,7 +6,7 @@ const Landing = () => {
     <>
       <main className={styles.container}>
         <section className={styles.splash}>
-          <img src={Logotype} alt="A cute owl" />
+          <img src={Logotype} alt="logo" />
         </section>
         <section className={styles.about}>
           <header>
