@@ -18,8 +18,10 @@ const MyProfile = () => {
 
   return (
     <main className={styles.container}>
-          <h1>{profile.name}</h1>
-          <h2>{profile.goals}</h2>
+      <h1>{profile.name}</h1>
+      {profile.goals.map(goal => (
+        <li>{goal.title}</li>
+      ))}
     </main>
   )
 }
