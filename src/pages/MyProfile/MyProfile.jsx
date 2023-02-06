@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
 import styles from './MyProfile.module.css'
+
 
 const MyProfile = () => {
   const [profile, setProfile] = useState()
@@ -19,9 +21,23 @@ const MyProfile = () => {
   return (
     <main className={styles.container}>
       <h1>{profile.name}</h1>
-      {profile.goals.map(goal => (
-        <li>{goal.title}</li>
-      ))}
+      <ul>
+        <h2>
+          My Goal Lists
+        </h2>
+        {profile.goals.map(goal => (
+          <li key={goal._id}>
+            <Link to='/'>{goal.title}</Link>
+          </li>
+        ))}
+      </ul>
+      <form>
+        <h2>
+          Make a new goal list 
+        </h2>
+        <input type="text" />
+        <button> submit </button>
+      </form>
     </main>
   )
 }
