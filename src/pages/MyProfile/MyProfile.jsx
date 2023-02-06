@@ -3,11 +3,12 @@ import * as profileService from '../../services/profileService'
 import styles from './MyProfile.module.css'
 
 const MyProfile = () => {
-  const [profile, setProfile] = useState(null)
+  const [profile, setProfile] = useState()
 
   useEffect(() => {
     const fetchProfile = async () => {
       const profileData = await profileService.getProfile()
+      console.log('profile data', profileData);
       setProfile(profileData)
     }
     fetchProfile()

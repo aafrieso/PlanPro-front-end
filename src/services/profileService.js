@@ -2,19 +2,21 @@ import * as tokenService from './tokenService'
 
 const BASE_URL = `${process.env.REACT_APP_BACK_END_SERVER_URL}/api/profiles`
 
-async function getAllProfiles(profileId) {
-  const res = await fetch(BASE_URL, profileId, {
+async function getAllProfiles() {
+  const res = await fetch(BASE_URL, {
     headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
   })
   return await res.json()
 }
 
-async function getProfile(profileId) {
+async function getProfile() {
   const res = await fetch(`${BASE_URL}/details`, {
     method: 'GET',
     headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
   })
-  return await res.json()
+  const data = await res.json()
+  console.log(data);
+  return data
 }
 
 async function addPhoto(photoData, profileId) {
