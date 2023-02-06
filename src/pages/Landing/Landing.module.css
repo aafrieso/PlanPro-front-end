@@ -15,8 +15,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  
-  
 }
 
 .container section > img {
@@ -24,14 +22,11 @@
   min-width: 460px;
   margin-top: 100px;
   -moz-box-shadow: -1px 5px 30px -5px rgba(0,0,0,0.15);
-  -webkit-box-shadow: -1px 5px 30px -5px rgba(0,0,0,0.15);
 }
 
 .splash {
   height: 91vh;
   justify-content: center;
-  
-  
 }
 
 .about {
@@ -40,7 +35,6 @@
   box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.15);
   -moz-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.15);
   -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.15);
-  
 }
 
 .about header {
