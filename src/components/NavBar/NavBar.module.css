@@ -47,3 +47,7 @@ a:hover {
     font-size: 15px;
   }
 }
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
