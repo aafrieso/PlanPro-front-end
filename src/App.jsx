@@ -8,7 +8,7 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import MyProfile from './pages/MyProfile/MyProfile'
-import GoalDetail from './components/GoalDetail/GoalDetail'
+import GoalDetail from './pages/GoalDetail/GoalDetail'
 
 // components
 import NavBar from './components/NavBar/NavBar'

@@ -1,8 +1,7 @@
-// import MyProfile from "../../pages/MyProfile/MyProfile"
-// import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import * as goalService from "../../services/goalService"
 import { useParams } from "react-router-dom"
+import TaskList from "../../components/TaskList/TaskList"
 
 const GoalDetail = () => {
   const { goalId } = useParams()
@@ -23,6 +22,7 @@ const GoalDetail = () => {
   return (
     <main>
       <h1>{goal.title}</h1>
+      <TaskList tasks={goal.tasks}/>
     </main>
   )
 }

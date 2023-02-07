@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
 import styles from './MyProfile.module.css'
-import GoalDetail from '../../components/GoalDetail/GoalDetail'
+import GoalDetail from '../GoalDetail/GoalDetail'
 
 
 const MyProfile = () => {
