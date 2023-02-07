@@ -14,6 +14,15 @@ const MyProfile = () => {
       console.log('profile data', profileData);
       setProfile(profileData)
     }
+    // const handleChange = ({ target }) => {
+    //   setProfile({ ...profile, [target.name]: target.value })
+    // }
+
+    // const handleSubmit = (e) => {
+    //   e.preventDefault(
+    //     props.handleAddGoalList(profile)
+    //   )
+    // }
     fetchProfile()
   }, [])
 
@@ -23,25 +32,28 @@ const MyProfile = () => {
     <main className={styles.container}>
       <section className={styles.welcome}>
         <img src={profile.photo} alt="" />
+        <h1>Welcome, {profile.name}</h1>
+        <form
+          // onSubmit={handleSubmit}
+          className={styles.form}
+        >
+          <h3 className={styles.list}>
+            Create goal list
+          </h3>
+          <input type="text" />
+          <button> submit </button>
+        </form>
+        <ul>
+          <h2 className={styles.goal}>
+            My Goal Lists
+          </h2 >
+          {profile.goals.map(goal => (
+            <li key={goal._id}>
+              <Link to={`/goalLists/${goal._id}`}>{goal.title}</Link>
+            </li>
+          ))}
+        </ul>
       </section >
-      <h1>Welcome, {profile.name}</h1>
-      <form className={styles.form}>
-        <h3>
-          Create goal list
-        </h3>
-        <input type="text" />
-        <button> submit </button>
-      </form>
-      <ul>
-        <h2>
-          My Goal Lists
-        </h2>
-        {profile.goals.map(goal => (
-          <li key={goal._id}>
-            <Link to={`/goalLists/${goal._id}`}>{goal.title}</Link>
-          </li>
-        ))}
-      </ul>
     </main>
   )
 }

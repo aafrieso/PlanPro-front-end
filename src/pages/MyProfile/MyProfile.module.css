@@ -1,3 +1,15 @@
+/* .container::after {
+  content:'';
+  position:fixed;
+  margin-top: 300px;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 400%;
+  height: 80%;
+  background-color: rgb(255, 255, 255);
+} */
+
 .container section>img {
   width: 220px;
   height: 220px;
@@ -13,6 +25,7 @@
   color: rgb(0, 0, 0);
   font-weight: 600;
   margin: 11px 0px 0px 0px;
+  width: 45%;
 }
 
 form {
@@ -25,8 +38,8 @@ form {
   align-items: center;
 }
 
-h2 {
-  margin-right: 40px;
+.container h1 {
+  margin-left: 20px;
 }
 
 .container {
@@ -37,6 +50,5 @@ h2 {
   color: #000000;
   width: 100%;
   align-self: center; 
-  background-color: #ffffff;
   margin-top: 100px;
 }

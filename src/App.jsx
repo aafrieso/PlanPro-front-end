@@ -34,6 +34,12 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  // const handleAddGoalList = async (goalId) => {
+  //   const newGoal = await goalService.create(goalId)
+  //   setGoals([newGoal, ...goals])
+  //   navigate('/goals')
+  // }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -59,7 +65,8 @@ const App = () => {
           path="/profile"
           element={
             <ProtectedRoute user={user}>
-              <MyProfile/>
+              <MyProfile />
+              {/* <MyProfile handleAddGoalList={handleAddGoalList}/> */}
             </ProtectedRoute>
           }
         />

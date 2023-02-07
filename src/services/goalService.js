@@ -24,7 +24,27 @@ const show = async (goalId) => {
   }
 }
 
+
+// const create = async (goalId) => {
+//   try {
+//     // POST http://localhost:3001/api/blogs
+//     const res = await fetch(BASE_URL, {
+//       method: 'POST',
+//       headers: {
+//         'Authorization': `Bearer ${tokenService.getToken()}`,
+//         'Content-Type': 'application/json'
+//       },
+//       body: JSON.stringify(goalId)
+//     })
+//     return res.json()
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+
 export { 
   index,
   show,
+  // create
 }
