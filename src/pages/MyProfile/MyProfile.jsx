@@ -30,21 +30,21 @@ const MyProfile = () => {
 
   return (
     <main className={styles.container}>
-      <section className={styles.welcome}>
+      <section>
         <img src={profile.photo} alt="" />
         <h1>Welcome, {profile.name}</h1>
         <form
           // onSubmit={handleSubmit}
           className={styles.form}
         >
-          <h3 className={styles.list}>
+          <h3>
             Create goal list
           </h3>
           <input type="text" />
           <button> submit </button>
         </form>
         <ul>
-          <h2 className={styles.goal}>
+          <h2>
             My Goal Lists
           </h2 >
           {profile.goals.map(goal => (
