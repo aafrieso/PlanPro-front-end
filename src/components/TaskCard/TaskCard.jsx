@@ -1,8 +1,6 @@
+import StepList from "../StepList/StepList";
+
 const TaskCard = (props) => {
-
-  console.log("TASK CARD", props.task);
-  
-
 
   return (
     <article style={{border: "1px solid black"}}>
@@ -10,6 +8,7 @@ const TaskCard = (props) => {
       <p>{props.task.note}</p>
       <p>{props.task.date}</p>
       <p>{props.task.time}</p>
+      <StepList steps={props.task.steps}/>
     </article>
   )
 }
