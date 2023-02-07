@@ -1,5 +1,15 @@
 .container section > img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  margin-left: 12px;
   border-radius: 50%;
-  max-width: 30%;
-  margin-top: 40px;
+  background-color: var(--background);
+  border:3px solid green; padding: 6px ;
+
+}
+
+.container {
+  background-color: aliceblue;
+  border-radius: 20px;
 }

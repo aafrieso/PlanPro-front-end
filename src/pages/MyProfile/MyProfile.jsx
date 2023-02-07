@@ -21,9 +21,9 @@ const MyProfile = () => {
 
   return (
     <main className={styles.container}>
-      <h1>{profile.name}</h1>
+      <h1>Welcome, {profile.name}</h1>
       <section>
-        <img src={profile.photo} alt="photo" />
+        <img src={profile.photo} alt="" />
       </section>
       <ul>
         <h2>
