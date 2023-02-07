@@ -40,7 +40,7 @@ const MyProfile = () => {
           >
             <div>
           <h3>
-              Create goal list
+              Create A Goal List
           </h3>
           <input type="text" />
           <button> submit </button>
