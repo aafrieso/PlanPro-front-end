@@ -31,7 +31,7 @@ button {
   border: 1px solid #fffffff4;
   box-shadow: rgba(0, 24, 8, 0.35) 0px 5px 15px;
   border: 0px solid #ffffff13;
-  
+  background-color: aliceblue;
 }
 
 
@@ -48,3 +48,7 @@ button {
 h1 {
   margin-top: 90px;
 }
+
+  button {
+    color: aliceblue;
+  }

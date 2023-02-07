@@ -33,28 +33,34 @@ const MyProfile = () => {
       <section>
         <img src={profile.photo} alt="" />
         <h1>Welcome, {profile.name}</h1>
+        <div>
         <form
           // onSubmit={handleSubmit}
           className={styles.form}
-        >
+          >
+            <div>
           <h3>
-            Create goal list
+              Create goal list
           </h3>
           <input type="text" />
           <button> submit </button>
-        </form>
-        <ul>
-          <h2>
-            My Goal Lists
-          </h2 >
-          {profile.goals.map(goal => (
-            <li key={goal._id}>
-              <Link to={`/goalLists/${goal._id}`}>{goal.title}</Link>
-            </li>
-          ))}
-        </ul>
-      </section >
-    </main>
+        </div>
+      </form>
+      <ul>
+      <div>
+        <h2>
+          My Goal Lists
+        </h2 >
+        {profile.goals.map(goal => (
+          <li key={goal._id}>
+            <Link to={`/goalLists/${goal._id}`}>{goal.title}</Link>
+          </li>
+        ))}
+      </div>
+      </ul>
+        </div>
+    </section >
+    </main >
   )
 }
 
