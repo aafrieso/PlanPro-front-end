@@ -6,12 +6,17 @@ PlanPro offers a holistic view of an individual's work and personal life, elimin
 
 Link to deployment here
 
-Link to plannning materials here
+## [Check out our PlanPro planning materials here]
 
-# Technologies Used
+## Technologies Used
 
 List of technologies used here
 
-# Credits
+## Credits
 
-# Ice Box 🧊
+## Ice Box 🧊
+
+* Add a calendar to the planding page
+* Create a form for meals and recipes
+* Add drag and drop functionality to tasks
+* Add the ability to use a pomodoro timer
