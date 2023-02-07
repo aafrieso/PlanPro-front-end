@@ -1,4 +1,8 @@
-/* .container::after {
+.container * {
+  z-index: 1;
+}
+
+.container::after {
   content:'';
   position:fixed;
   margin-top: 300px;
@@ -8,7 +12,7 @@
   width: 400%;
   height: 80%;
   background-color: rgb(255, 255, 255);
-} */
+}
 
 .container section>img {
   width: 220px;
@@ -16,7 +20,6 @@
   object-fit: cover;
   margin-left: 12px;
   border-radius: 50%;
-  background-color: var(--background);
   border: 3px solid #ffffff;
   padding: 6px;
 }
