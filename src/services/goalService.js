@@ -1,6 +1,6 @@
 import * as tokenService from './tokenService'
 
-const BASE_URL = `${process.env.REACT_APP_BACK_END_SERVER_URL}/api/goals`
+const BASE_URL = `${process.env.REACT_APP_BACK_END_SERVER_URL}/api/goalLists`
 
 const index = async () => {
   try {
@@ -13,4 +13,18 @@ const index = async () => {
   }
 }
 
-export { index }
+const show = async (goalId) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${goalId}`, {
+      headers: { 'Authorization': `Bearer ${tokenService.getToken()}`}
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export { 
+  index,
+  show,
+}
