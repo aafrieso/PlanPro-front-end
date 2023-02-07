@@ -10,7 +10,15 @@ PlanPro offers a holistic view of an individual's work and personal life, elimin
 
 ## Technologies Used
 
-List of technologies used here
+* GitHub
+* MongoDb
+* ReactJS
+* Node.js
+* Express
+* JavaScript
+* CSS
+* Fly.io
+* Visual Studio Code  
 
 ## Credits
 
