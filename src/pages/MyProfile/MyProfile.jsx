@@ -21,10 +21,10 @@ const MyProfile = () => {
 
   return (
     <main className={styles.container}>
-      <h1>Welcome, {profile.name}</h1>
       <section>
         <img src={profile.photo} alt="" />
       </section>
+      <h1>Welcome, {profile.name}</h1>
       <ul>
         <h2>
           My Goal Lists
@@ -36,9 +36,9 @@ const MyProfile = () => {
         ))}
       </ul>
       <form>
-        <h2>
-          Make a new goal list
-        </h2>
+        <h3>
+          Create goal list
+        </h3>
         <input type="text" />
         <button> submit </button>
       </form>
