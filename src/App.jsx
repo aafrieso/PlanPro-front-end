@@ -8,6 +8,7 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import MyProfile from './pages/MyProfile/MyProfile'
+import GoalDetail from './pages/GoalDetail/GoalDetail'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -60,6 +61,14 @@ const App = () => {
             <ProtectedRoute user={user}>
               <MyProfile/>
             </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/goalLists/:goalId"
+          element={
+            <ProtectedRoute user={user}>
+            <GoalDetail />
+          </ProtectedRoute>
           }
         />
       </Routes>
