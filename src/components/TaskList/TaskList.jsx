@@ -1,4 +1,4 @@
-
+import TaskCard from "../TaskCard/TaskCard";
 
 const TaskList = (props) => {
 
@@ -10,7 +10,7 @@ const TaskList = (props) => {
     <section>
       <h2>Task List</h2>
       {props.tasks.map(task => (
-        <p>{task.taskName}</p>
+        <TaskCard task={task}/>
       ))}
     </section>
   )
