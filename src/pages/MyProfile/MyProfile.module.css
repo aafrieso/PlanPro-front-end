@@ -3,6 +3,7 @@
 }
 
 .container::after {
+  opacity: 80%;
   content:'';
   position:fixed;
   margin-top: 300px;
@@ -52,6 +53,7 @@
 
 .container h1 {
   margin-left: 24px;
+  margin-top: 40px;
 }
 
 .container h2 {
