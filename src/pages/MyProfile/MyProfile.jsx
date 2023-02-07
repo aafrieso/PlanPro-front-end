@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
 import styles from './MyProfile.module.css'
-import GoalDetail from '../GoalDetail/GoalDetail'
+// import GoalDetail from '../GoalDetail/GoalDetail'
 
 
 const MyProfile = () => {
@@ -21,7 +21,10 @@ const MyProfile = () => {
 
   return (
     <main className={styles.container}>
-      <h1>{profile.name}</h1>
+      <h1>Welcome, {profile.name}</h1>
+      <section>
+        <img src={profile.photo} alt="" />
+      </section>
       <ul>
         <h2>
           My Goal Lists
@@ -34,7 +37,7 @@ const MyProfile = () => {
       </ul>
       <form>
         <h2>
-          Make a new goal list 
+          Make a new goal list
         </h2>
         <input type="text" />
         <button> submit </button>
