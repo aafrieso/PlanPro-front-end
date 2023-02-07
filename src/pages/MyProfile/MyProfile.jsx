@@ -14,7 +14,7 @@ const MyProfile = () => {
       console.log('profile data', profileData);
       setProfile(profileData)
     }
-    // const handleChange = ({ target }) => {
+    // const handleAdd = ({ target }) => {
     //   setProfile({ ...profile, [target.name]: target.value })
     // }
 
