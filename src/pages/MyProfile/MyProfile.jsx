@@ -5,7 +5,7 @@ import styles from './MyProfile.module.css'
 // import GoalDetail from '../GoalDetail/GoalDetail'
 
 
-const MyProfile = () => {
+const MyProfile = (props) => {
   const [profile, setProfile] = useState()
 
   useEffect(() => {
@@ -14,17 +14,18 @@ const MyProfile = () => {
       console.log('profile data', profileData);
       setProfile(profileData)
     }
-    // const handleAdd = ({ target }) => {
-    //   setProfile({ ...profile, [target.name]: target.value })
-    // }
-
-    // const handleSubmit = (e) => {
-    //   e.preventDefault(
-    //     props.handleAddGoalList(profile)
-    //   )
-    // }
     fetchProfile()
   }, [])
+
+  const handleChange = ({ target }) => {
+    setProfile({ ...profile, [target.name]: target.value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault(
+      props.handleAddGoalList(profile)
+    )
+  }
 
   if (!profile) return <p>Please Log In or Sign Up!</p>
 
@@ -33,33 +34,34 @@ const MyProfile = () => {
       <section>
         <img src={profile.photo} alt="" />
         <h1>Welcome, {profile.name}</h1>
-        <div>
         <form
-          // onSubmit={handleSubmit}
+          onSubmit={handleSubmit}
           className={styles.form}
-          >
-            <div>
+        >
           <h3>
-              Create A Goal List
+            Create A Goal List
           </h3>
-          <input type="text" />
+          <input
+            type="text"
+            onChange={handleChange}
+            />
           <button> submit </button>
-        </div>
-      </form>
-      <ul>
-      <div>
-        <h2>
-          My Goal Lists
-        </h2 >
-        {profile.goals.map(goal => (
-          <li key={goal._id}>
-            <Link to={`/goalLists/${goal._id}`}>{goal.title}</Link>
-          </li>
-        ))}
-      </div>
-      </ul>
-        </div>
-    </section >
+
+        </form>
+        <ul>
+          <h2>
+            My Goal Lists
+          </h2 >
+          {profile.goals.map(goal => (
+            <li
+              key={goal._id}
+            >
+              <Link to={`/goalLists/${goal._id}`}>{goal.title}</Link>
+            </li>
+          ))}
+
+        </ul>
+      </section >
     </main >
   )
 }
