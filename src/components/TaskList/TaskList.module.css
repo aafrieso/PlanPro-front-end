@@ -10,6 +10,7 @@
   border: none;
   width: 100px;
   height: 30px;
+  color: rgb(255, 255, 255);
 }
 
 .container input{
@@ -17,12 +18,17 @@
 }
 
 .container main {
-display: flex;
 margin: 15px;
 }
 
 .container h2  {
   display: flex;
   align-items: center;
+  margin: 20px;
+  margin-top: 100px;
+  justify-content: center;
 }
 
+.container section {
+  align-items: center;
+}
