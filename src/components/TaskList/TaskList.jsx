@@ -6,7 +6,7 @@ const TaskList = (props) => {
     <section>
       <h2>Task List</h2>
       {props.tasks.map(task => (
-        <TaskCard key={task._id} task={task}/>
+        <TaskCard key={task._id} task={task} category={task.category}/>
       ))}
     </section>
   )
