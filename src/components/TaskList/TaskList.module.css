@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+}
+
+.container button{
+  background-color:rgb(10, 136, 73);
+  font-weight: 600;
+  margin-left: 30px;
+  border: none;
+  width: 150px;
+}
+
+.container input{
+  margin: 5px;
+}

@@ -35,7 +35,7 @@ const NewTask = (props) => {
   return (
     <main className={styles.container}>
       <section>
-        <header style={{ display: 'flex' }}>
+        <header>
           <h2>New Task</h2>
           <button style={btnStyle} onClick={handleToggle}>
             Show
