@@ -17,16 +17,16 @@ const MyProfile = (props) => {
     fetchProfile()
   }, [])
 
-  const [title, setTitle] = useState()
+  // const [title, setTitle] = useState()
 
-  const handleChange = ({ target }) => {
-    setTitle(target.value)
-  }
+  // const handleChange = ({ target }) => {
+  //   setTitle(target.value)
+  // }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-      props.handleAddGoalList({title, note:'Placeholder'})
-  }
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //     props.handleAddGoalList({title, note:'Placeholder'})
+  // }
 
   if (!profile) return <p>Please Log In or Sign Up!</p>
 
@@ -36,7 +36,7 @@ const MyProfile = (props) => {
         <img src={profile.photo} alt="" />
         <h1>Welcome, {profile.name}</h1>
         <form
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
           className={styles.form}
         >
           <h3>
@@ -44,8 +44,8 @@ const MyProfile = (props) => {
           </h3>
           <input
             type="text"
-            value={title}
-            onChange={handleChange}
+            // value={title}
+            // onChange={handleChange}
             />
           <button> submit </button>
 

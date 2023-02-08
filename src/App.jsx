@@ -16,7 +16,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // services
 import * as authService from './services/authService'
-import * as goalService from './services/goalService'
+// import * as goalService from './services/goalService'
 
 // styles
 import './App.css'
@@ -35,13 +35,13 @@ const App = () => {
     setUser(authService.getUser())
   }
 
-  const [goalLists, setGoalLists] = useState(goalService.index())
+  // const [goalLists, setGoalLists] = useState(goalService.index())
 
-  const handleAddGoalList = async (goalId) => {
-    const newGoal = await goalService.create(goalId)
-    setGoalLists([newGoal, ...goalLists])
-    navigate('/goals')
-  }
+  // const handleAddGoalList = async (goalId) => {
+  //   const newGoal = await goalService.create(goalId)
+  //   setGoalLists([newGoal, ...goalLists])
+  //   navigate('/goals')
+  // }
 
   return (
     <>
@@ -68,8 +68,8 @@ const App = () => {
           path="/profile"
           element={
             <ProtectedRoute user={user}>
-              {/* <MyProfile />  */}
-              <MyProfile handleAddGoalList={handleAddGoalList}/>
+              <MyProfile /> 
+              {/* <MyProfile handleAddGoalList={handleAddGoalList}/> */}
             </ProtectedRoute>
           }
         />
