@@ -2,11 +2,11 @@
 
 ![PlanPro Screenshot](public/PlanProPNG.png)
 
-PlanPro offers a holistic view of an individual's work and personal life, eliminating the need for constant calendar switching and reducing the time spent on planning. It provides a clear overview of daily tasks and upcoming appointments, making it easier for users to manage their schedules and focus on what's important.
+PlanPro offers a holistic view of an individual's work and personal life, eliminating the need for constant calendar switching by hand and reducing the time spent on planning. It provides a clear overview of daily tasks and upcoming appointments, making it easier for users to manage their schedules and focus on what's important.
 
-## [Check out PlanPro for yourself]
+## [Check out PlanPro for yourself](https://planpro.netlify.app/)
 
-## [Check out our PlanPro planning materials here](https://trello.com/b/rIikIfZ0/planpro)
+## [Click here to check out our PlanPro planning materials](https://trello.com/b/rIikIfZ0/planpro)
 
 ## Technologies Used
 
