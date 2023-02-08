@@ -25,6 +25,7 @@ const show = async (goalId) => {
 }
 
 const create = async (goalData) => {
+  console.log(BASE_URL, goalData);
   try {
     // POST http://localhost:3001/api/blogs
     const res = await fetch(BASE_URL, {

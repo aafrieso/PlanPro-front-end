@@ -17,14 +17,15 @@ const MyProfile = (props) => {
     fetchProfile()
   }, [])
 
+  const [title, setTitle] = useState()
+
   const handleChange = ({ target }) => {
-    setProfile({ ...profile, [target.name]: target.value })
+    setTitle(target.value)
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault(
-      props.handleAddGoalList(profile)
-    )
+    e.preventDefault()
+      props.handleAddGoalList({title, note:'Placeholder'})
   }
 
   if (!profile) return <p>Please Log In or Sign Up!</p>
@@ -43,6 +44,7 @@ const MyProfile = (props) => {
           </h3>
           <input
             type="text"
+            value={title}
             onChange={handleChange}
             />
           <button> submit </button>
