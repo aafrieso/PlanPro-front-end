@@ -71,3 +71,7 @@
   color: rgb(10, 136, 73);
   content: "\27bd \0020";
 }
+
+.container a {
+  font-style: italic;
+}
