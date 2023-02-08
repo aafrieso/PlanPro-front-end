@@ -8,7 +8,7 @@ const TaskList = (props) => {
   const handleToggle = () => {
     setVisible(!visible)
   }
-  
+
   return (
     <section>
       <header style={{display: 'flex'}}>
@@ -19,7 +19,13 @@ const TaskList = (props) => {
       </header>
       {visible && 
         props.tasks.map(task => (
-          <TaskCard key={task._id} task={task} category={task.category}/>
+          <TaskCard 
+            key={task._id} 
+            task={task} 
+            category={task.category}
+            handleDeleteTask={props.handleDeleteTask}
+            handleUpdateTask={props.handleUpdateTask}
+          />
         ))
       }
     </section>
