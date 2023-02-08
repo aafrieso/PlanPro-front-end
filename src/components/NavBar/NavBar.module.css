@@ -36,7 +36,7 @@ a {
 }
 
 a:hover {
-  color: rgb(51, 138, 104);
+  color: #338a68;
 }
 
 @media only screen and (max-width: 414px) {

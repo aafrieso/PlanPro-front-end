@@ -34,6 +34,10 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  
+
+  
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -59,7 +63,7 @@ const App = () => {
           path="/profile"
           element={
             <ProtectedRoute user={user}>
-              <MyProfile/>
+              <MyProfile /> 
             </ProtectedRoute>
           }
         />
@@ -70,13 +74,6 @@ const App = () => {
             <GoalDetail />
           </ProtectedRoute>
           }
-        // <Route 
-        // path="/goalLists/:stepId/steps"
-        // element={
-        //   <ProtectedRoute user={user}>
-        //   <GoalDetail />
-        // </ProtectedRoute>
-        // }
         />
       </Routes>
     </>

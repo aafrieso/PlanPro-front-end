@@ -1,15 +1,61 @@
-.container section > img {
+.container * {
+  z-index: 1;
+}
+
+.container::after {
+  opacity: 80%;
+  content:'';
+  position:fixed;
+  margin-top: 300px;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 400%;
+  height: 80%;
+  background-color: rgb(255, 255, 255);
+}
+
+.container section>img {
   width: 220px;
   height: 220px;
   object-fit: cover;
   margin-left: 12px;
   border-radius: 50%;
   background-color: var(--background);
-  border:3px solid green; padding: 6px ;
+  border: 3px solid #ffffff;
+  padding: 6px;
+}
 
+.container button {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  margin: 11px 0px 0px 0px;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(10, 136, 73);
+  padding: 50px;
+  border-radius: 40px;
+  align-items: center;
 }
 
 .container {
-  background-color: aliceblue;
-  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  color: #000000;
+  width: 100%;
+  margin-top: 170px;
+}
+
+.container h1 {
+  margin-left: 24px;
+  margin-top: 40px;
+}
+
+.container h2 {
+  margin-left: 10px;
 }
