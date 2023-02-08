@@ -6,7 +6,7 @@ PlanPro offers a holistic view of an individual's work and personal life, elimin
 
 ## [Check out PlanPro for yourself]
 
-## [Check out our PlanPro planning materials here](https://trello.com/b/rIikIfZ0/planpro)
+## [Click here to check out our PlanPro planning materials](https://trello.com/b/rIikIfZ0/planpro)
 
 ## Technologies Used
 

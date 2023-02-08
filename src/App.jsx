@@ -70,6 +70,13 @@ const App = () => {
             <GoalDetail />
           </ProtectedRoute>
           }
+        // <Route 
+        // path="/goalLists/:stepId/steps"
+        // element={
+        //   <ProtectedRoute user={user}>
+        //   <GoalDetail />
+        // </ProtectedRoute>
+        // }
         />
       </Routes>
     </>
