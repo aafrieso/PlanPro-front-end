@@ -59,3 +59,11 @@
 .container h2 {
   margin-left: 10px;
 }
+.container li {
+  list-style: none;
+}
+  
+.container li:before {
+  color: rgb(10, 136, 73);
+  content: "\27bd \0020";
+  }
