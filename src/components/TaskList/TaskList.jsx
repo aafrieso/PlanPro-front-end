@@ -1,13 +1,34 @@
+import { useState } from "react";
 import TaskCard from "../TaskCard/TaskCard";
 
 const TaskList = (props) => {
 
+  const [visible, setVisible] = useState(false)
+  const btnStyle = {width: '70px', height: '50px'}
+  const handleToggle = () => {
+    setVisible(!visible)
+  }
+
   return (
     <section>
-      <h2>Task List</h2>
-      {props.tasks.map(task => (
-        <TaskCard key={task._id} task={task} category={task.category}/>
-      ))}
+      <header style={{display: 'flex'}}>
+        <h2>Task List</h2>
+        <button style={btnStyle} onClick={handleToggle}>
+          Show
+        </button>
+      </header>
+      {visible && 
+        props.tasks.map(task => (
+          <TaskCard 
+            key={task._id} 
+            task={task} 
+            category={task.category}
+            handleDeleteTask={props.handleDeleteTask}
+            handleUpdateTask={props.handleUpdateTask}
+            handleAddStep={props.handleAddStep}
+          />
+        ))
+      }
     </section>
   )
 }
