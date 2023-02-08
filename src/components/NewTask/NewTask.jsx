@@ -36,10 +36,11 @@ const NewTask = (props) => {
     <main className={styles.container}>
       <section>
         <header>
-          <h2>New Task</h2>
+          <h2>New Task
           <button style={btnStyle} onClick={handleToggle}>
             Show
           </button>
+          </h2>
         </header>
         {visible &&
           <form onSubmit={handleSubmit}>
