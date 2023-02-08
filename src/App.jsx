@@ -9,6 +9,7 @@ import Landing from './pages/Landing/Landing'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import MyProfile from './pages/MyProfile/MyProfile'
 import GoalDetail from './pages/GoalDetail/GoalDetail'
+import Quotes from './pages/Quotes/Quotes'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -72,6 +73,14 @@ const App = () => {
           element={
             <ProtectedRoute user={user}>
             <GoalDetail />
+          </ProtectedRoute>
+          }
+        />
+                <Route 
+          path="/quotes"
+          element={
+            <ProtectedRoute user={user}>
+            <Quotes />
           </ProtectedRoute>
           }
         />
