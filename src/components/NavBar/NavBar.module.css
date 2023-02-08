@@ -32,22 +32,10 @@
 }
 
 a {
-  color: rgb(0, 0, 0)
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
 
 a:hover {
   color: #338a68;
-}
-
-@media only screen and (max-width: 414px) {
-  .container ul {
-    padding-left: 0px;
-  }
-  .container li {
-    font-size: 15px;
-  }
-}
-
-a:-webkit-any-link {
-  text-decoration: none;
 }

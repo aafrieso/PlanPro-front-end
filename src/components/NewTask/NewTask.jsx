@@ -36,14 +36,15 @@ const NewTask = (props) => {
     <main className={styles.container}>
       <section>
         <header>
-          <h2>New Task</h2>
+          <h2>New Task
           <button style={btnStyle} onClick={handleToggle}>
             Show
           </button>
+          </h2>
         </header>
         {visible &&
           <form onSubmit={handleSubmit}>
-            <label>Title</label>
+            <label>Title:</label>
             <input
               type="text"
               name='taskName'
@@ -51,7 +52,7 @@ const NewTask = (props) => {
               onChange={handleChange}
               required
             />
-            <label>Description</label>
+            <label>Description:</label>
             <input
               name='note'
               type='text'
@@ -59,14 +60,14 @@ const NewTask = (props) => {
               onChange={handleChange}
               required
             />
-            <label>Date</label>
+            <label>Date:</label>
             <input
               type='date'
               name='date'
               value={form.date}
               onChange={handleChange}
             />
-            <label>Time</label>
+            <label>Time:</label>
             <input
               type="text"
               name='time'

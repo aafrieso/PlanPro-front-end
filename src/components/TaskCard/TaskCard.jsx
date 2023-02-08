@@ -17,7 +17,7 @@ const TaskCard = (props) => {
             Mark Complete
           </button>
         }
-        <p>This Task is: {task.isComplete ? 'complete' : 'incomplete'}</p>
+        <p>This Task is: {task.isComplete ? 'Complete' : 'Incomplete'}</p>
         <p>Description: {task.note}</p>
         <p>Complete By: {task.date} {task.time}</p>
         {/* <p>{task.time}</p> */}
