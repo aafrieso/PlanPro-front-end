@@ -15,33 +15,26 @@
   border-radius: 5px;
 }
 
-/* .container form {
+.container form {
   display: flex;
   border-radius: 40px;
   align-items: center;
   margin-left: 20px;
   margin-top: 20px; 
   justify-content: center;
-} */
+}
 
 .container h2 {
   display: flex;
   align-items: center;
   margin: 20px;
-  margin-top: 40px;
+  margin-top: 5px;
   justify-content: center;
 }
 
-.container h1 {
-  display: flex;
-  margin: 30px;
-  justify-content: center;
-}
 
-.container form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+
+.container {
   border: 3px solid green;
   padding: 30px;
   margin: 30px;
