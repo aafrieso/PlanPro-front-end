@@ -1,5 +1,6 @@
 .container main {
 display: flex;
+
 margin: 15px;
 }
 .container button{
@@ -18,9 +19,12 @@ margin: 15px;
 
 .container form {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   border-radius: 40px;
   align-items: center;
   margin-left: 20px;
-  justify-content:left;
+}
+
+.container p {
+  margin-left: 40px;
 }
