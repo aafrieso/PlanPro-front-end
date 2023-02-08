@@ -12,6 +12,7 @@
 
 .container input{
   margin: 5px;
+  border-radius: 5px;
 }
 
 .container form {
@@ -20,12 +21,14 @@
   border-radius: 40px;
   align-items: center;
   margin-left: 20px;
+  margin-top: 20px; 
 }
 
 .container h2 {
   display: flex;
   align-items: center;
   margin: 20px;
+  margin-top: 40px;
 }
 
 .container h1 {

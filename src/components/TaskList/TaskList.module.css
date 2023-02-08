@@ -18,14 +18,14 @@
 }
 
 .container main {
-margin: 15px;
+margin: 20px;
 }
 
 .container h2  {
   display: flex;
   align-items: center;
   margin: 20px;
-  margin-top: 100px;
+  margin-top: 90px;
   justify-content: center;
 }
 
