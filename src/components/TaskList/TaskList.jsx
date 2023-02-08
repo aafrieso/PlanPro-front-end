@@ -25,7 +25,7 @@ const TaskList = (props) => {
             <TaskCard
               key={task._id}
               task={task}
-              category={task.category}
+              // category={task.category}
               handleDeleteTask={props.handleDeleteTask}
               handleUpdateTask={props.handleUpdateTask}
               handleAddStep={props.handleAddStep}
