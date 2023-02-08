@@ -4,7 +4,7 @@
   align-items: left;
   border-radius: 35px;
   background-color: rgb(255, 255, 255);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: #bfc1c0 3px 3px 6px 0px inset, #bfc1c0 -3px -3px 6px 1px inset;
 }
 
 .container p {
