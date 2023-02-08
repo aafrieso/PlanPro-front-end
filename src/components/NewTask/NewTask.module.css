@@ -25,6 +25,7 @@ margin: 15px;
   margin-left: 20px;
 }
 
-.container p {
-  margin-left: 40px;
+.container h2 {
+  display: flex;
+  align-items: center;
 }

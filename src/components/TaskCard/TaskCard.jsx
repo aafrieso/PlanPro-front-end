@@ -14,7 +14,7 @@ const TaskCard = (props) => {
         </button>
         {!task.isComplete &&
           <button onClick={() => props.handleUpdateTask(task._id)}>
-            Mark Complete
+            Completed
           </button>
         }
         <p>This Task is: {task.isComplete ? 'Complete' : 'Incomplete'}</p>

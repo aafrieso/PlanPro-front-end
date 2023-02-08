@@ -10,7 +10,6 @@ const NewTask = (props) => {
     time: ''
   })
   const [visible, setVisible] = useState(false)
-  const btnStyle = { width: '70px', height: '50px' }
   const handleToggle = () => {
     setVisible(!visible)
   }
@@ -38,7 +37,7 @@ const NewTask = (props) => {
         <header>
           <h2>New Task
             <div>
-          <button style={btnStyle} onClick={handleToggle}>
+          <button onClick={handleToggle}>
             Show
           </button>
             </div>
