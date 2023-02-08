@@ -15,9 +15,11 @@ const TaskList = (props) => {
       <section>
         <header style={{ display: 'flex' }}>
           <h2>Task List
+            <div>
           <button style={btnStyle} onClick={handleToggle}>
             Show
           </button>
+            </div>
           </h2>
         </header>
         {visible &&

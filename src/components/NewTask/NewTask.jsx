@@ -37,9 +37,11 @@ const NewTask = (props) => {
       <section>
         <header>
           <h2>New Task
+            <div>
           <button style={btnStyle} onClick={handleToggle}>
             Show
           </button>
+            </div>
           </h2>
         </header>
         {visible &&
