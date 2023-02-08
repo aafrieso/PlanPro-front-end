@@ -46,8 +46,10 @@ button {
 }
 
 h1 {
+  display: flex;
   margin-top: 100px;
   margin-left: 20px;
+  justify-content: center;
 }
 
   button {
