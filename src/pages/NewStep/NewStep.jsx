@@ -20,7 +20,7 @@ const NewStep = (props) => {
     <section>
       <h4>Add a new Step</h4>
       <form onSubmit={handleSubmit}>
-        <label>Step</label>
+        <label>Step:</label>
         <input
           type="text"
           name="title"
