@@ -32,6 +32,15 @@ const MyProfile = (props) => {
     setTitle(target.value)
   }
 
+  const handleDeleteGoal = async (goalId) => {
+    const deletedGoal = await goalService.deleteGoal(goalId)
+    setProfile({
+      ...profile, goals: profile.goals.filter((g) => {
+        return deletedGoal._id !== g._id
+      })
+    })
+  }
+
   if (!profile) return <p>Please Log In or Sign Up!</p>
 
   return (
@@ -60,10 +69,11 @@ const MyProfile = (props) => {
             My Goal Lists
           </h2 >
           {profile.goals.map(goal => (
-            <li
-              key={goal._id}
-            >
+            <li key={goal._id}>
               <Link to={`/goalLists/${goal._id}`}>{goal.title}</Link>
+              <button onClick={() => handleDeleteGoal(goal._id)}>
+                Delete Goal
+              </button>
             </li>
           ))}
 
