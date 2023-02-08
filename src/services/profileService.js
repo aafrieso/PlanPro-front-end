@@ -30,4 +30,6 @@ async function addPhoto(photoData, profileId) {
   return await res.json()
 }
 
+
+
 export { getAllProfiles, addPhoto, getProfile }

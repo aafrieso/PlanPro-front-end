@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import * as goalService from '../../services/goalService'
 import * as profileService from '../../services/profileService'
 import styles from './MyProfile.module.css'
 // import GoalDetail from '../GoalDetail/GoalDetail'
 
 
 const MyProfile = (props) => {
-  const [profile, setProfile] = useState()
+  const [profile, setProfile] = useState(null)
+
+  const [title, setTitle] = useState('')
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -17,16 +20,17 @@ const MyProfile = (props) => {
     fetchProfile()
   }, [])
 
-  // const [title, setTitle] = useState()
+  const handleAddGoalList = async (e) => {
+    e.preventDefault()
+    const formData={title:title}
+    const newGoalList = await goalService.createGoal(formData)
+    setProfile({...profile,goals:[...profile.goals,newGoalList]})
+    setTitle('')
+  }
 
-  // const handleChange = ({ target }) => {
-  //   setTitle(target.value)
-  // }
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //     props.handleAddGoalList({title, note:'Placeholder'})
-  // }
+  const handleChange = ({ target }) => {
+    setTitle(target.value)
+  }
 
   if (!profile) return <p>Please Log In or Sign Up!</p>
 
@@ -36,17 +40,18 @@ const MyProfile = (props) => {
         <img src={profile.photo} alt="" />
         <h1>Welcome, {profile.name}</h1>
         <form
-          // onSubmit={handleSubmit}
+          onSubmit={handleAddGoalList}
           className={styles.form}
         >
           <h3>
             Create A Goal List
           </h3>
           <input
+            name="title"
             type="text"
-            // value={title}
-            // onChange={handleChange}
-            />
+            value={title}
+            onChange={handleChange}
+          />
           <button> submit </button>
 
         </form>
