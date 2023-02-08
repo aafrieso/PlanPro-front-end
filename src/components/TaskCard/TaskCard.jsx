@@ -17,10 +17,10 @@ const TaskCard = (props) => {
             Mark Complete
           </button>
         }
-        <p>{task.isComplete ? 'complete' : 'incomplete'}</p>
-        <p>{task.note}</p>
-        <p>{task.date}</p>
-        <p>{task.time}</p>
+        <p>This Task is: {task.isComplete ? 'complete' : 'incomplete'}</p>
+        <p>Description: {task.note}</p>
+        <p>Complete By: {task.date} {task.time}</p>
+        {/* <p>{task.time}</p> */}
         <StepList steps={task.steps} />
         <NewStep task={task} handleAddStep={props.handleAddStep} />
       </article>
