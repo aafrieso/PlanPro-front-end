@@ -14,10 +14,11 @@ const TaskList = (props) => {
     <main className={styles.container}>
       <section>
         <header style={{ display: 'flex' }}>
-          <h2>Task List</h2>
+          <h2>Task List
           <button style={btnStyle} onClick={handleToggle}>
             Show
           </button>
+          </h2>
         </header>
         {visible &&
           props.tasks.map(task => (
