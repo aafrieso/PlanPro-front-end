@@ -4,8 +4,8 @@
 
 .container::after {
   opacity: 80%;
-  content:'';
-  position:fixed;
+  content: '';
+  position: fixed;
   margin-top: 300px;
   top: 0;
   left: 0;
@@ -39,6 +39,7 @@
   padding: 50px;
   border-radius: 40px;
   align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -52,18 +53,21 @@
 }
 
 .container h1 {
-  margin-left: 24px;
+  margin-left: 40px;
   margin-top: 40px;
+  justify-content: center;
+  align-content: center;
 }
 
 .container h2 {
-  margin-left: 10px;
+  align-content: center;
 }
+
 .container li {
   list-style: none;
 }
-  
+
 .container li:before {
   color: rgb(10, 136, 73);
   content: "\27bd \0020";
-  }
+}
