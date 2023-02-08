@@ -1,10 +1,8 @@
 import StepList from "../StepList/StepList";
-import { useState } from "react";
 import NewStep from "../../pages/NewStep/NewStep";
-import TaskList from "../TaskList/TaskList";
 
 const TaskCard = (props) => {
-  // const [task, setTask] = useState(props.task)
+
   const {task} = props
   return (
     <article style={{border: "1px solid black"}}>
@@ -22,7 +20,7 @@ const TaskCard = (props) => {
       <p>{task.date}</p>
       <p>{task.time}</p>
       <StepList steps={task.steps}/>
-      {/* <NewStep task={task} setTask={setTask}/> */}
+      <NewStep task={task} handleAddStep={props.handleAddStep} />
     </article>
   )
 }

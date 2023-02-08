@@ -40,6 +40,17 @@ const GoalDetail = () => {
     })
   }
 
+  const handleAddStep = async (taskId, stepData) => {
+    const updatedTask =await taskService.createStep(taskId, stepData)
+    setGoal({
+      ...goal, tasks: goal.tasks.map((t) => {
+        return t._id === updatedTask._id
+          ? updatedTask 
+          : t
+      })
+    })
+  }
+
   useEffect(() => {
     const fetchGoal = async () => {
       const goalData = await goalService.show(goalId)
@@ -59,6 +70,7 @@ const GoalDetail = () => {
         tasks={goal.tasks} 
         handleDeleteTask={handleDeleteTask}
         handleUpdateTask={handleUpdateTask}
+        handleAddStep={handleAddStep}
       />
     </main>
   )

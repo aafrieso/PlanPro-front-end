@@ -25,6 +25,7 @@ const TaskList = (props) => {
             category={task.category}
             handleDeleteTask={props.handleDeleteTask}
             handleUpdateTask={props.handleUpdateTask}
+            handleAddStep={props.handleAddStep}
           />
         ))
       }

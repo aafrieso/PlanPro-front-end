@@ -10,10 +10,9 @@ const NewStep = (props) => {
     setStep({ ...step, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    const data = await taskService.createStep(props.task._id, step)
-    props.setTask(data)
+    props.handleAddStep(props.task._id, step)
     setStep({title:''})
   };
 
