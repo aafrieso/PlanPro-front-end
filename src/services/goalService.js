@@ -24,28 +24,24 @@ const show = async (goalId) => {
   }
 }
 
-// const create = async (goalData) => {
-//   console.log(BASE_URL, goalData);
-//   try {
-//     // POST http://localhost:3001/api/blogs
-//     const res = await fetch(BASE_URL, {
-//       method: 'POST',
-//       headers: {
-//         'Authorization': `Bearer ${tokenService.getToken()}`,
-//         'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify(goalData)
-//     })
-//     return res.json()
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-
-
+const createStep = async (taskId, stepData) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${taskId}/steps`, {
+      method: 'POST',
+      headers: { 
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(stepData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 export { 
   index,
   show,
-  // create
+  createStep
 }
