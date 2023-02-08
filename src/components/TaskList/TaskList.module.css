@@ -13,3 +13,8 @@
 .container input{
   margin: 5px;
 }
+
+.container main {
+display: flex;
+margin: 15px;
+}
