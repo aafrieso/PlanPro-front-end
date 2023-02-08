@@ -1,6 +1,6 @@
 # PlanPro
 
-IMG goes here
+![PlanPro Screenshot](public/PlanProPNG.png)
 
 PlanPro offers a holistic view of an individual's work and personal life, eliminating the need for constant calendar switching and reducing the time spent on planning. It provides a clear overview of daily tasks and upcoming appointments, making it easier for users to manage their schedules and focus on what's important.
 
@@ -22,11 +22,11 @@ PlanPro offers a holistic view of an individual's work and personal life, elimin
 
 ## Credits
 
-* Fly.io is used for the deployment of this application
+* Netlify and Fly.io are used for the deployment of this application
 
 ## Ice Box 🧊
 
-* Users can access calendar to the landing page
-* Create a form for meals and recipes
+* Users can access a calendar on their landing page
+* Ability to create a form for meals and recipes
 * Add drag and drop functionality
 * Add the ability to use a pomodoro timer
