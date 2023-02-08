@@ -23,6 +23,8 @@ PlanPro offers a holistic view of an individual's work and personal life, elimin
 ## Credits
 
 * Netlify and Fly.io are used for the deployment of this application
+* Logo and Favicon designed using Adobe Illustrator
+* Markdown badges through GitHub
 
 ## Ice Box 🧊
 
