@@ -33,16 +33,12 @@ const NewTask = (props) => {
 
   return (
     <main className={styles.container}>
-      <section>
-        <header>
-          <h2>New Task
-            <div>
+      <div>
+        <h2>New Task
           <button onClick={handleToggle}>
             Show
           </button>
-            </div>
-          </h2>
-        </header>
+        </h2>
         {visible &&
           <form onSubmit={handleSubmit}>
             <label>Title:</label>
@@ -79,7 +75,7 @@ const NewTask = (props) => {
           </form>
 
         }
-      </section>
+      </div>
     </main>
   )
 }

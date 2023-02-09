@@ -12,7 +12,7 @@ const TaskList = (props) => {
   return (
     <main className={styles.container}>
       <section>
-        <header style={{ display: 'flex' }}>
+        <header>
           <h2>Task List
             <div>
           <button onClick={handleToggle}>
