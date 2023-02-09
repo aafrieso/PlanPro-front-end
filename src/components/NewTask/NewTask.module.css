@@ -1,3 +1,22 @@
+.container * {
+  z-index: 5;
+  /* overflow: hidden; */
+}
+
+.container::before {
+  opacity: 80%;
+  /* content: ''; */
+  position: fixed;
+  /* margin-top: 300px; */
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 40%;
+  height: 80%;
+  background-color: rgb(255, 255, 255);
+}
+
+
 .container input {
   margin: 25px;
   border-radius: 5px;
