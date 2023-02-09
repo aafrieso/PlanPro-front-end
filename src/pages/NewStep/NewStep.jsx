@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from './NewStep.module.css'
-// import * as taskService from "../../services/taskService";
 
 const NewStep = (props) => {
   const [step, setStep] = useState({
@@ -19,19 +18,22 @@ const NewStep = (props) => {
 
   return (
     <main className={styles.container}>
-      <section>
-        <h4>Add a new Step</h4>
-        <form onSubmit={handleSubmit}>
-          <label>Step:</label>
-          <input
-            type="text"
-            name="title"
-            value={step.title}
-            onChange={handleChange}
-          />
-          <button type="submit">Submit New Step</button>
-        </form>
-      </section>
+      <div>
+
+        <section>
+          <form onSubmit={handleSubmit}>
+          <h4>Add a new Step</h4>
+            <label>Step:</label>
+            <input
+              type="text"
+              name="title"
+              value={step.title}
+              onChange={handleChange}
+            />
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+      </div>
     </main>
   );
 };

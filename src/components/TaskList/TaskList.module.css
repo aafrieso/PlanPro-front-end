@@ -1,21 +1,51 @@
 .container {
   display: flex;
+  /* justify-content: row; */
 }
 
-.container button{
-  background-color:rgb(10, 136, 73);
+.container div>button {
+  background-color: rgb(10, 136, 73);
   font-weight: 600;
+  padding: 5px;
   margin-left: 30px;
   border: none;
-  width: 150px;
+  width: 100px;
+  height: 30px;
+  color: rgb(255, 255, 255);
 }
 
-.container input{
+.container button {
+  background-color: rgb(10, 136, 73);
+  font-weight: 600;
+  padding: 5px;
+  border: none;
+  width: 100px;
+  height: 30px;
+  color: rgb(255, 255, 255);
+}
+
+
+.container input {
   margin: 5px;
 }
 
 .container main {
-display: flex;
-margin: 15px;
+  margin: 20px;
 }
 
+.container h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.container article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -30,18 +30,12 @@ const Quote = (props) => {
       {props.quotes.map((quote) => (
         <li key={quote._id}>
           {quote.quote}
-          {/* {console.log("quote.author:", quote.author)} */}
-          {console.log("props.user.profile:", props.user?.profile)}
-          {quote.author === props.user?.profile && (
-            <>
-              <button
-                style={{ color: "black" }}
-                onClick={() => props.handleDeleteQuote(quote._id)}
-                >
-                X
-              </button>
-            </>
-          )}
+          <button
+            style={{ color: "black" }}
+            onClick={() => props.handleDeleteQuote(quote._id)}
+          >
+            X
+          </button>
         </li>
       ))}
     </>
@@ -49,3 +43,4 @@ const Quote = (props) => {
 };
 
 export default Quote;
+
