@@ -45,7 +45,6 @@ const App = () => {
     const fetchAllQuotes = async () => {
       const data = await quoteService.index()
       setQuotes(data)
-      console.log('quote Data:', data)
     }
     if (user) fetchAllQuotes()
   }, [user])
@@ -53,13 +52,11 @@ const App = () => {
   const handleUpdateQuote = async (quoteData) => {
     const updatedQuote = await quoteService.update(quoteData)
     setQuotes(Quotes.map((q) => quoteData._id === q._id ? updatedQuote : q))
-    // navigate('/quotes')
   }
 
   const handleDeleteQuote = async (id) => {
-    const deletedQuote = await quoteService.deleteQuote(id)
-    setQuotes(quotes.filter(q => q._id !== deletedQuote._id))
-    // navigate('/quotes')
+    const deleteQuote = await quoteService.deleteQuote(id)
+    setQuotes(quotes.filter((q) => q._id !== deleteQuote._id))
   }
 
   return (
@@ -103,7 +100,8 @@ const App = () => {
           path="/quotes"
           element={
             <ProtectedRoute user={user}>
-            <Quotes  quotes={quotes} handleAddQuote={handleAddQuote}/>
+            <Quotes  quotes={quotes} handleAddQuote={handleAddQuote} handleDeleteQuote={handleDeleteQuote}/>
+            
           </ProtectedRoute>
           }
         />
