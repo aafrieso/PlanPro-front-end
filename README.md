@@ -18,6 +18,8 @@
 * Netlify and Fly.io are used for the deployment of this application
 * Logo and Favicon designed using Adobe Illustrator
 * Markdown badges from GitHub
+* Google Fonts
+* Unsplash used to create the background
 
 ## Ice Box 🧊
 
