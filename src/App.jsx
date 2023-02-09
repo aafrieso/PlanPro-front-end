@@ -1,5 +1,5 @@
 // npm modules
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 
 // page components
@@ -17,12 +17,14 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // services
 import * as authService from './services/authService'
-
+import * as quoteService from './services/quoteService'
 // styles
 import './App.css'
+import EditQuote from './pages/EditQuote/EditQuote'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
+  const [quotes, setQuotes] = useState([])
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -35,9 +37,30 @@ const App = () => {
     setUser(authService.getUser())
   }
 
-  
+  const handleAddQuote = async (quoteData) => {
+    const newQuote = await quoteService.createQuote(quoteData)
+    setQuotes([newQuote, ...quotes])
+  }
+  useEffect(() => {
+    const fetchAllQuotes = async () => {
+      const data = await quoteService.index()
+      setQuotes(data)
+      console.log('quote Data:', data)
+    }
+    if (user) fetchAllQuotes()
+  }, [user])
 
-  
+  const handleUpdateQuote = async (quoteData) => {
+    const updatedQuote = await quoteService.update(quoteData)
+    setQuotes(Quotes.map((q) => quoteData._id === q._id ? updatedQuote : q))
+    // navigate('/quotes')
+  }
+
+  const handleDeleteQuote = async (id) => {
+    const deletedQuote = await quoteService.deleteQuote(id)
+    setQuotes(quotes.filter(q => q._id !== deletedQuote._id))
+    // navigate('/quotes')
+  }
 
   return (
     <>
@@ -80,10 +103,15 @@ const App = () => {
           path="/quotes"
           element={
             <ProtectedRoute user={user}>
-            <Quotes />
+            <Quotes  quotes={quotes} handleAddQuote={handleAddQuote}/>
           </ProtectedRoute>
           }
         />
+        <Route path="/quotes/:id/edit" element={
+	<ProtectedRoute user={user}>
+		<EditQuote handleUpdateQuote={handleUpdateQuote} />
+	</ProtectedRoute>
+    } />
       </Routes>
     </>
   )
