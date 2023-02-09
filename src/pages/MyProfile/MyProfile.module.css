@@ -1,3 +1,4 @@
+
 .container * {
   z-index: 1;
 }
@@ -15,6 +16,7 @@
   background-color: rgb(255, 255, 255);
 }
 
+
 .container img {
   width: 220px;
   height: 220px;
@@ -24,36 +26,40 @@
   background-color: var(--background);
   border: 3px solid #ffffff;
   padding: 6px;
-
-
 }
 
 .container button {
+  display: flex;
   color: rgb(0, 0, 0);
   font-weight: 600;
   margin: 11px 0px 0px 0px;
-  outline: 2px solid rgb(10, 136, 73);
   background-color: #ffffff;
+  width: 150px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
-.container li > button {
+.container li>button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: rgb(0, 0, 0);
   font-weight: 600;
   margin: 11px 0px 0px 0px;
   margin-left: 20px;
-  outline: 2px solid rgb(10, 136, 73);
   background-color: #ffffff;
+  width: 150px;
+  height: 20px;
 }
 
 .container form {
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgb(205, 208, 206) 3px 3px 6px 0px inset,  rgb(205, 208, 206) -3px -3px 6px 1px inset;
   padding: 50px;
   border-radius: 20px;
   align-items: center;
-  justify-content: center;
+  margin-top: -30px;
 }
 
 .container {
@@ -73,24 +79,28 @@
   align-content: center;
 }
 
-.container h2 {
-  align-content: center;
-  margin-left: 50px;
-}
 
 .container li {
   list-style: none;
-  display: flex;
   align-items: center;
-
+  margin: 20px;
 }
 
 .container li:before {
   color: rgb(10, 136, 73);
   content: "\25bd \0020";
-  margin-right:8px;
+  margin-right: 8px;
 }
 
 .container h3 {
   color: #000000;
+}
+
+.container h2 {
+  margin-left: 20px;
+  margin: 20px;
+}
+
+.container button:hover {
+  color: #338a68;
 }
