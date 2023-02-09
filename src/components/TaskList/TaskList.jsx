@@ -11,6 +11,7 @@ const TaskList = (props) => {
 
   return (
     <main className={styles.container}>
+      <div>
       <section>
         <header>
           <h2>Task List
@@ -34,6 +35,7 @@ const TaskList = (props) => {
           ))
         }
       </section>
+        </div>
     </main>
   )
 }
