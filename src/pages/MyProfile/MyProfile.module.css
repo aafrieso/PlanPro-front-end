@@ -29,17 +29,27 @@
 }
 
 .container button {
-  color: rgb(10, 136, 73);
+  color: rgb(0, 0, 0);
   font-weight: 600;
   margin: 11px 0px 0px 0px;
   outline: 2px solid rgb(10, 136, 73);
+  background-color: #ffffff;
+}
+
+.container li > button {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  margin: 11px 0px 0px 0px;
+  margin-left: 20px;
+  outline: 2px solid rgb(10, 136, 73);
+  background-color: #ffffff;
 }
 
 .container form {
   display: flex;
   flex-direction: column;
-  background-color: rgb(10, 136, 73);
-  box-shadow: rgb(6, 96, 51) 3px 3px 6px 0px inset, rgb(4, 85, 45) -3px -3px 6px 1px inset;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(205, 208, 206) 3px 3px 6px 0px inset,  rgb(205, 208, 206) -3px -3px 6px 1px inset;
   padding: 50px;
   border-radius: 20px;
   align-items: center;
@@ -65,6 +75,7 @@
 
 .container h2 {
   align-content: center;
+  margin-left: 50px;
 }
 
 .container li {
@@ -76,10 +87,10 @@
 
 .container li:before {
   color: rgb(10, 136, 73);
-  content: "\27bd \0020";
-  /* background-image: url(/src/assets/); */
+  content: "\25bd \0020";
+  margin-right:8px;
 }
 
 .container h3 {
-  color: #ffffff;
+  color: #000000;
 }
