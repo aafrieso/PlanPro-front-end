@@ -69,7 +69,9 @@ const NewTask = (props) => {
             />
             <label>Time:</label>
             <input
-              type="text"
+              type='time'
+              min='00:00'
+              max='00:00' 
               name='time'
               value={form.time}
               onChange={handleChange}
