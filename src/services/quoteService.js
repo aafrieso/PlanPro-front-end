@@ -40,22 +40,6 @@ const createQuote = async (quoteData) => {
   }
 };
 
-const update = async (quoteData) => {
-  try {
-    const res = await fetch(`${BASE_URL}/${quoteData._id}`, {
-      method: "PUT",
-      headers: {
-        Authorization: `Bearer ${tokenService.getToken()}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(quoteData),
-    });
-    return res.json();
-  } catch (error) {
-    console.log(error);
-  }
-};
-
 const deleteQuote = async (id) => {
   try {
     const res = await fetch(`${BASE_URL}/${id}`, {
@@ -69,4 +53,4 @@ const deleteQuote = async (id) => {
     console.log(error);
   }
 };
-export { index, show, createQuote, update, deleteQuote, };
+export { index, show, createQuote, deleteQuote };

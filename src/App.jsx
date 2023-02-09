@@ -1,63 +1,57 @@
 // npm modules
-import { useState, useEffect } from 'react'
-import { Routes, Route, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 // page components
-import Signup from './pages/Signup/Signup'
-import Login from './pages/Login/Login'
-import Landing from './pages/Landing/Landing'
-import ChangePassword from './pages/ChangePassword/ChangePassword'
-import MyProfile from './pages/MyProfile/MyProfile'
-import GoalDetail from './pages/GoalDetail/GoalDetail'
-import Quotes from './pages/Quotes/Quotes'
+import Signup from "./pages/Signup/Signup";
+import Login from "./pages/Login/Login";
+import Landing from "./pages/Landing/Landing";
+import ChangePassword from "./pages/ChangePassword/ChangePassword";
+import MyProfile from "./pages/MyProfile/MyProfile";
+import GoalDetail from "./pages/GoalDetail/GoalDetail";
+import Quotes from "./pages/Quotes/Quotes";
 
 // components
-import NavBar from './components/NavBar/NavBar'
-import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
+import NavBar from "./components/NavBar/NavBar";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 // services
-import * as authService from './services/authService'
-import * as quoteService from './services/quoteService'
+import * as authService from "./services/authService";
+import * as quoteService from "./services/quoteService";
 // styles
-import './App.css'
-import EditQuote from './pages/EditQuote/EditQuote'
+import "./App.css";
 
 const App = () => {
-  const [user, setUser] = useState(authService.getUser())
-  const [quotes, setQuotes] = useState([])
-  const navigate = useNavigate()
+  const [user, setUser] = useState(authService.getUser());
+  const [quotes, setQuotes] = useState([]);
+  const navigate = useNavigate();
 
   const handleLogout = () => {
-    authService.logout()
-    setUser(null)
-    navigate('/')
-  }
+    authService.logout();
+    setUser(null);
+    navigate("/");
+  };
 
   const handleSignupOrLogin = () => {
-    setUser(authService.getUser())
-  }
+    setUser(authService.getUser());
+  };
 
   const handleAddQuote = async (quoteData) => {
-    const newQuote = await quoteService.createQuote(quoteData)
-    setQuotes([newQuote, ...quotes])
-  }
+    const newQuote = await quoteService.createQuote(quoteData);
+    setQuotes([newQuote, ...quotes]);
+  };
   useEffect(() => {
     const fetchAllQuotes = async () => {
-      const data = await quoteService.index()
-      setQuotes(data)
-    }
-    if (user) fetchAllQuotes()
-  }, [user])
-
-  const handleUpdateQuote = async (quoteData) => {
-    const updatedQuote = await quoteService.update(quoteData)
-    setQuotes(Quotes.map((q) => quoteData._id === q._id ? updatedQuote : q))
-  }
+      const data = await quoteService.index();
+      setQuotes(data);
+    };
+    if (user) fetchAllQuotes();
+  }, [user]);
 
   const handleDeleteQuote = async (id) => {
-    const deleteQuote = await quoteService.deleteQuote(id)
-    setQuotes(quotes.filter((q) => q._id !== deleteQuote._id))
-  }
+    const deleteQuote = await quoteService.deleteQuote(id);
+    setQuotes(quotes.filter((q) => q._id !== deleteQuote._id));
+  };
 
   return (
     <>
@@ -79,40 +73,38 @@ const App = () => {
               <ChangePassword handleSignupOrLogin={handleSignupOrLogin} />
             </ProtectedRoute>
           }
-          />
-          <Route
+        />
+        <Route
           path="/profile"
           element={
             <ProtectedRoute user={user}>
-              <MyProfile /> 
+              <MyProfile />
             </ProtectedRoute>
           }
         />
-        <Route 
+        <Route
           path="/goalLists/:goalId"
           element={
             <ProtectedRoute user={user}>
-            <GoalDetail />
-          </ProtectedRoute>
+              <GoalDetail />
+            </ProtectedRoute>
           }
         />
-                <Route 
+        <Route
           path="/quotes"
           element={
             <ProtectedRoute user={user}>
-            <Quotes  quotes={quotes} handleAddQuote={handleAddQuote} handleDeleteQuote={handleDeleteQuote}/>
-            
-          </ProtectedRoute>
+              <Quotes
+                quotes={quotes}
+                handleAddQuote={handleAddQuote}
+                handleDeleteQuote={handleDeleteQuote}
+              />
+            </ProtectedRoute>
           }
         />
-        <Route path="/quotes/:id/edit" element={
-	<ProtectedRoute user={user}>
-		<EditQuote handleUpdateQuote={handleUpdateQuote} />
-	</ProtectedRoute>
-    } />
       </Routes>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

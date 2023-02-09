@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import styles from "./Quotes.module.css";
 
 const Quote = (props) => {
   const [quote, setQuote] = useState({ quote: "" });
@@ -12,10 +11,6 @@ const Quote = (props) => {
     event.preventDefault();
     props.handleAddQuote(quote);
   };
-
-  // const handleDeleteQuote = (id) => {
-  //   props.handleDeleteQuote(id);
-  // };
 
   return (
     <>
@@ -33,14 +28,18 @@ const Quote = (props) => {
         </button>
       </form>
       {props.quotes.map((quote) => (
-  <li key={quote._id}>
-    {quote.quote}
-    <button style={{ color: "black" }} onClick={() => props.handleDeleteQuote(quote._id)}>X</button>
-  </li>
-))}
-
+        <li key={quote._id}>
+          {quote.quote}
+          <button
+            style={{ color: "black" }}
+            onClick={() => props.handleDeleteQuote(quote._id)}
+          >
+            X
+          </button>
+        </li>
+      ))}
     </>
   );
 };
 
-export default Quote
+export default Quote;
