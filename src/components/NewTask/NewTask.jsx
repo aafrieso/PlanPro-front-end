@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from './NewTask.module.css'
-
+import moment from 'moment';
 
 const NewTask = (props) => {
   const [form, setForm] = useState({
@@ -17,7 +17,7 @@ const NewTask = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    const date = new Date(form.date + 'T' + form.time).toLocaleDateString();
+    const formattedDate = moment().format('YYYY-MM-DD')
     const time = new Date(form.date + 'T' + form.time).toLocaleTimeString(
         undefined,
         {
@@ -25,9 +25,8 @@ const NewTask = (props) => {
             minute: '2-digit'
         }
     );
-    props.handleAddTask({ ...form, date, time });
+    props.handleAddTask({ ...form, formattedDate, time });
 
-    // props.handleAddTask(form)
     setVisible(false)
     setForm({
       note: '',
@@ -72,7 +71,7 @@ const NewTask = (props) => {
             <input
               type='date'
               name='date'
-              value={form.date}
+              value={form.formattedDate}
               onChange={handleChange}
             />
             <label>Time:</label>
