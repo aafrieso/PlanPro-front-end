@@ -27,7 +27,6 @@ const NewTask = (props) => {
     );
     props.handleAddTask({ ...form, date, time });
 
-    // props.handleAddTask(form)
     setVisible(false)
     setForm({
       note: '',
