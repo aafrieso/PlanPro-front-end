@@ -16,7 +16,18 @@ const NewTask = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    props.handleAddTask(form)
+
+    const date = new Date(form.date + 'T' + form.time).toLocaleDateString();
+    const time = new Date(form.date + 'T' + form.time).toLocaleTimeString(
+        undefined,
+        {
+            hour: '2-digit',
+            minute: '2-digit'
+        }
+    );
+    props.handleAddTask({ ...form, date, time });
+
+    // props.handleAddTask(form)
     setVisible(false)
     setForm({
       note: '',
