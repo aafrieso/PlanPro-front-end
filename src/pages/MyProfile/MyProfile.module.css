@@ -40,6 +40,8 @@
   display: flex;
   flex-direction: column;
   background-color: rgb(10, 136, 73);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
   padding: 50px;
   border-radius: 40px;
   align-items: center;
@@ -70,16 +72,15 @@
 
 .container li {
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .container li:before {
   color: rgb(10, 136, 73);
   content: "\27bd \0020";
-}
-
-.container a {
-  font-style: italic;
-  margin-right: 14px;
+ 
 }
 
 .container h3 {

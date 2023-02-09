@@ -29,7 +29,7 @@ const NewStep = (props) => {
             value={step.title}
             onChange={handleChange}
           />
-          <button type="submit">Submit New Step</button>
+          <button type="submit">Submit</button>
         </form>
       </section>
     </main>

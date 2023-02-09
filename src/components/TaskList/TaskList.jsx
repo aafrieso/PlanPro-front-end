@@ -5,7 +5,6 @@ import styles from './TaskList.module.css'
 const TaskList = (props) => {
 
   const [visible, setVisible] = useState(false)
-  const btnStyle = { width: '70px', height: '50px' }
   const handleToggle = () => {
     setVisible(!visible)
   }
@@ -15,9 +14,11 @@ const TaskList = (props) => {
       <section>
         <header style={{ display: 'flex' }}>
           <h2>Task List
-          <button style={btnStyle} onClick={handleToggle}>
+            <div>
+          <button onClick={handleToggle}>
             Show
           </button>
+            </div>
           </h2>
         </header>
         {visible &&
