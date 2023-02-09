@@ -22,8 +22,8 @@ const NewStep = (props) => {
       <div>
 
         <section>
-          <h4>Add a new Step</h4>
           <form onSubmit={handleSubmit}>
+          <h4>Add a new Step</h4>
             <label>Step:</label>
             <input
               type="text"
