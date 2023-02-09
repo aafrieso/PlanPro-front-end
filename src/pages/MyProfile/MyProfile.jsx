@@ -45,9 +45,9 @@ const MyProfile = (props) => {
 
   return (
     <main className={styles.container}>
-      <section>
         <img src={profile.photo} alt="" />
         <h1>Welcome, {profile.name}</h1>
+        <section>
         <form
           onSubmit={handleAddGoalList}
           className={styles.form}

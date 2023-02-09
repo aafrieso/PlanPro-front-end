@@ -11,8 +11,8 @@ const TaskList = (props) => {
 
   return (
     <main className={styles.container}>
-      <section>
-        <header style={{ display: 'flex' }}>
+      <div>
+        <header>
           <h2>Task List
             <div>
           <button onClick={handleToggle}>
@@ -33,7 +33,7 @@ const TaskList = (props) => {
             />
           ))
         }
-      </section>
+        </div>
     </main>
   )
 }

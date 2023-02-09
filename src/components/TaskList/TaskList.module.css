@@ -1,12 +1,12 @@
 .container {
   display: flex;
-  justify-content: row;
+  /* justify-content: row; */
 }
 
-.container div > button{
-  background-color:rgb(10, 136, 73);
+.container div>button {
+  background-color: rgb(10, 136, 73);
   font-weight: 600;
-  padding:5px;
+  padding: 5px;
   margin-left: 30px;
   border: none;
   width: 100px;
@@ -14,10 +14,10 @@
   color: rgb(255, 255, 255);
 }
 
-.container button{
-  background-color:rgb(10, 136, 73);
+.container button {
+  background-color: rgb(10, 136, 73);
   font-weight: 600;
-  padding:5px;
+  padding: 5px;
   border: none;
   width: 100px;
   height: 30px;
@@ -25,7 +25,7 @@
 }
 
 
-.container input{
+.container input {
   margin: 5px;
 }
 
@@ -33,24 +33,19 @@
   margin: 20px;
 }
 
-.container h2  {
+.container h2 {
   display: flex;
-  margin-top: 70px;
+  justify-content: center;
 }
 
 .container article {
- display: flex;
- flex-direction: column;
- align-items: center;
-}
-
-.container header{
-  justify-content: center;
-}
-
-.container h4  {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h4 {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  
 }
