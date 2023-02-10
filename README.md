@@ -2,11 +2,15 @@
 
 ![PlanPro Screenshot](public/IMG/PlanProPNG.png)
 
-📌 PlanPro offers a holistic view of an individual's work and personal life, eliminating the need for constant calendar switching by hand and reducing the time spent on planning. It provides a clear overview of daily tasks and upcoming appointments, making it easier for users to manage their schedules and focus on what's important. That being said,PlanPro is designed with flexibility in mind, allowing users to access it from anywhere, at any time.
+![PlanPro Screenshot](public/IMG/planProApp.png)
 
-## ➡️ [Check out PlanPro for yourself](https://planpro.netlify.app/)
+📌 PlanPro offers a holistic view of an individual's work and personal life, eliminating the need for constant calendar switching by hand and reducing the time spent on planning. It provides a clear overview of daily tasks and upcoming appointments, making it easier for users to manage their schedules and focus on what's important. That being said, PlanPro is designed with flexibility in mind, allowing users to access it from anywhere, at any time.
+
+## ➡️ [Check Out PlanPro For Yourself](https://planpro.netlify.app/)
 
 ## 📎 [Click here to check out our PlanPro planning materials](https://trello.com/b/rIikIfZ0/planpro)
+
+## [Check Out PlanPro Back End](https://github.com/Primemerlinian/PlanPro-back-end)
 
 ## Technologies Used 💻
 
@@ -27,3 +31,21 @@
 * Ability to create a form for meals and recipes
 * Add drag and drop functionality
 * Add the ability to use a pomodoro timer
+
+## Meet The Team
+
+![TeamPhoto](public/IMG/Megan.png){:width=“100px” height=“100px”}
+
+* [Megan Smith's GitHub Page](https://github.com/Megans766)
+
+![TeamPhoto](public/IMG/Mariah.png){:width=“100px” height=“100px”}
+
+* [Mariah Lara's GitHub Page](https://github.com/Primemerlinian)
+
+[TeamPhoto](public/IMG/Jeremy.png){:width=“100px” height=“100px”}
+
+* [Jeremy Robinson's GitHub Page](https://github.com/jrob1time)
+
+[TeamPhoto](public/IMG/Austin.png){:width=“100px” height=“100px”}
+
+* [Austin Friesorger's GitHub Page](https://github.com/aafrieso)
