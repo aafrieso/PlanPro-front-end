@@ -13,12 +13,12 @@ const LoginPage = props => {
     
     <main className={styles.container}>
       <section>
-      <h1>Log In</h1>
-        <LoginForm
-          message={message}
-          updateMessage={updateMessage}
-          handleSignupOrLogin={props.handleSignupOrLogin}
-        />
+        <h1>Log In</h1>
+          <LoginForm
+            message={message}
+            updateMessage={updateMessage}
+            handleSignupOrLogin={props.handleSignupOrLogin}
+          />
       </section>
     </main>
   )

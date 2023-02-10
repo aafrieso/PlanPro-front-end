@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from './Quotes.module.css'
 
 const Quote = (props) => {
   const [quote, setQuote] = useState({ quote: "" });
@@ -13,7 +14,7 @@ const Quote = (props) => {
   };
 
   return (
-    <>
+    <main className={styles.container}>
       <form onSubmit={handleSubmit}>
         <h1>Quote</h1>
         <label> Add an Inspirational Quote here!</label>
@@ -38,7 +39,7 @@ const Quote = (props) => {
           </button>
         </li>
       ))}
-    </>
+    </main>
   );
 };
 
