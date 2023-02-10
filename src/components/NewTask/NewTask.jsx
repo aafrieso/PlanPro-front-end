@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styles from './NewTask.module.css'
-import moment from 'moment';
 
 const NewTask = (props) => {
   const [form, setForm] = useState({
@@ -9,30 +8,21 @@ const NewTask = (props) => {
     date: '',
     time: ''
   })
-
   const [visible, setVisible] = useState(false)
-
   const handleToggle = () => {
     setVisible(!visible)
   }
-
   const handleSubmit = (e) => {
     e.preventDefault()
     const date = new Date(form.date + 'T' + form.time).toLocaleDateString();
-
-    const formattedDate = moment().format('YYYY-MM-DD')
-    
     const time = new Date(form.date + 'T' + form.time).toLocaleTimeString(
-      undefined,
-      {
-        hour: '2-digit',
-        minute: '2-digit'
-      }
-    );
+        undefined,
+        {
+          hour: '2-digit',
+          minute: '2-digit'
+        }
+    )
     props.handleAddTask({ ...form, date, time });
-
-    props.handleAddTask({ ...form, formattedDate, time });
-
     setVisible(false)
     setForm({
       note: '',
@@ -41,16 +31,17 @@ const NewTask = (props) => {
       time: ''
     })
   }
-
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
   }
-
+  console.log(form);
   return (
     <main className={styles.container}>
       <div>
         <h2>New Task
-        <button onClick={handleToggle}>Show</button>
+          <button onClick={handleToggle}>
+            Show
+          </button>
         </h2>
         {visible &&
           <form onSubmit={handleSubmit}>
@@ -74,7 +65,7 @@ const NewTask = (props) => {
             <input
               type='date'
               name='date'
-              value={form.formattedDate}
+              value={form.date}
               onChange={handleChange}
             />
             <label>Time:</label>

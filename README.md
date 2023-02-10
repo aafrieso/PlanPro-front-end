@@ -34,6 +34,7 @@
 
 ## Meet The Team
 
+
 ![TeamPhoto](public/IMG/Megan.png){:width=“100px” height=“100px”}
 
 * [Megan Smith's GitHub Page](https://github.com/Megans766)
@@ -49,3 +50,4 @@
 [TeamPhoto](public/IMG/Austin.png){:width=“100px” height=“100px”}
 
 * [Austin Friesorger's GitHub Page](https://github.com/aafrieso)
+
