@@ -45,7 +45,6 @@ button {
   align-items: center;
   font-weight: 600;
   margin: 20px 0px 24px 0px;
- 
 }
 
 h1 {
@@ -55,6 +54,6 @@ h1 {
   justify-content: center;
 }
 
-  button {
-    color: aliceblue;
+button {
+  color: aliceblue;
   }
