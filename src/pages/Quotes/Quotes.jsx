@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 const Quote = (props) => {
   const [quote, setQuote] = useState({ quote: "" });
-  console.log(quote);
   const handleChange = ({ target }) => {
     setQuote({ ...quote, [target.name]: target.value });
   };
