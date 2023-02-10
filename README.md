@@ -34,7 +34,11 @@
 
 ## Meet The Team
 
-* Megan Smith: [GitHub Page](https://github.com/Megans766)
-* Mariah Lara: [GitHub Page](https://github.com/Primemerlinian)
-* Jeremy Robinson: [GitHub Page](https://github.com/jrob1time)
-* Austin Friesorger: [GitHub Page](https://github.com/aafrieso)
+* Megan Smith:![TeamPhoto](public/IMG/Megan.png)
+[Megan's GitHub Page](https://github.com/Megans766)
+* Mariah Lara:![TeamPhoto](public/IMG/Mariah.png)
+[Mariah's GitHub Page](https://github.com/Primemerlinian)
+* Jeremy Robinson:![TeamPhoto](public/IMG/Jeremy.png)
+[Jeremy's GitHub Page](https://github.com/jrob1time)
+* Austin Friesorger:![TeamPhoto](public/IMG/Austin.png)
+[Austin's GitHub Page](https://github.com/aafrieso)
