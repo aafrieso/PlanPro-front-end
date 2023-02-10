@@ -36,16 +36,16 @@
 
 ![TeamPhoto](<img src='public/IMG/Megan.png' width="100" height="100"/>)
 
-* [Megan Smith's GitHub Page](https://github.com/Megans766)
+[Megan Smith's GitHub Page](https://github.com/Megans766)
 
 ![TeamPhoto](<img src='public/IMG/Mariah.png' width="100" height="100")
 
-* [Mariah Lara's GitHub Page](https://github.com/Primemerlinian)
+[Mariah Lara's GitHub Page](https://github.com/Primemerlinian)
 
 ![TeamPhoto](<img src='public/IMG/Jeremy.png' width="100" height="100")
 
-* [Jeremy Robinson's GitHub Page](https://github.com/jrob1time)
+[Jeremy Robinson's GitHub Page](https://github.com/jrob1time)
 
 ![TeamPhoto](<img src='public/IMG/Austin.png' width="100" height="100")
 
-* [Austin Friesorger's GitHub Page](https://github.com/aafrieso)
+[Austin Friesorger's GitHub Page](https://github.com/aafrieso)
